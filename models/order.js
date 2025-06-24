@@ -1,9 +1,6 @@
 const mongoose = require('mongoose');
 
 const orderSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  product: String,
   productId: String,
   quantity: Number,
   customerName: String,
