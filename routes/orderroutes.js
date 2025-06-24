@@ -22,11 +22,11 @@ router.post("/orders", async (req, res) => {
     await sendEmail({
       to: email,
       subject: "Thank you for your order!",
-      text: `Hi ${name},\n\nThanks for your order of $${totalPrice}!\nWe will process it shortly.\n\nRegards,\nShop Team`,
+      text: `Hi ${name},\n\nThanks for your order of ₹${totalPrice}!\nWe will process it shortly.\n\nRegards,\nIsha International`,
     });
 
     await sendEmail({
-      to: "youremail@example.com",
+      to: "yogathing0@gmail.com",
       subject: "New Order Received",
       text: `
 New order received:
@@ -37,7 +37,7 @@ Phone: ${phone}
 Address: ${address}
 Payment Method: ${paymentMethod}
 Products: ${JSON.stringify(products, null, 2)}
-Total Price: $${totalPrice}
+Total Price: ₹${totalPrice}
       `,
     });
 
