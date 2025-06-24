@@ -21,7 +21,7 @@ app.use(cors({
   },
   credentials: true, // Optional: if you're using cookies/sessions
 }));
-
+app.options('*', cors());
 app.use(express.json());
 
 // Connect MongoDB
